@@ -3,6 +3,8 @@ const DEFAULT_SIZE = 16;
 
 
 let mouseDown = false;
+let eraser = false;
+let color = DEFAULT_COLOR;
 
 function loadGrid(grid_size) {
     const container = document.querySelector('#container');
@@ -22,9 +24,19 @@ function loadGrid(grid_size) {
     }
 }
 
+function toggleEraser() {
+    eraser = !eraser;
+    if (eraser) {
+        document.getElementById('eraser').innerHTML = 'Eraser On';
+        color = '#fefefe';
+    } else {
+        document.getElementById('eraser').innerHTML = 'Eraser Off';
+        color = DEFAULT_COLOR;
+    }
+}
 function highlight(e) {
     if (e.type === 'mouseover' && mouseDown)
-    e.target.style.backgroundColor = DEFAULT_COLOR;
+    e.target.style.backgroundColor = color;
 }
 
 function reset(size) {

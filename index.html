@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <script src="./main.js"></script>
-    <title>Document</title>
+    <title>Etch-A-Sketch</title>
 </head>
 <body>
-    <div>
+    <div class="options">
+        <button onclick="toggleEraser()" id="eraser">Eraser Off</button>
+        <div>
+            <input type="text" id="size" placeholder="Enter Grid Size">
+            <button onclick="reset(document.getElementById('size').value)">Enter</button>
+        </div>
         <button onclick="reset(16)">Reset</button>
-        <input type="text" id="size">
-        <button onclick="reset(document.getElementById('size').value)">Enter</button>
     </div>
     <div id="container" class="container"></div>
 </body>

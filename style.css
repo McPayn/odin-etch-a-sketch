@@ -4,16 +4,35 @@ body {
     justify-content: center;
     background-color: rgb(46, 44, 44);
     height: 100vh;
+    gap: 100px; 
 }
 
+button, input {
+    border-radius: 5px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+button:active {
+    background-color: rgb(122, 116, 116);
+}
+input {
+    width: 250px;
+}
 .container {
     display: flex;
     flex-direction: column;
     background-color: white;
-    height: 600px;
-    width: 600px;
+    height: 800px;
+    width: 800px;
 }
 
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 .child {
     display: flex;
     border: 1px solid rgb(118, 118, 122);
