@@ -9,13 +9,20 @@
 </head>
 <body>
     <div class="options">
+        <div class="color-container">
+            <input type="color" id="colorpicker" value="#000000">
+            <button onclick="changeColor(document.getElementById('colorpicker').value)" id="color-button">Choose Color</button>
+        </div> 
         <button onclick="toggleEraser()" id="eraser">Eraser Off</button>
-        <div>
+        <div class="size-container">
             <input type="text" id="size" placeholder="Enter Grid Size">
             <button onclick="reset(document.getElementById('size').value)">Enter</button>
         </div>
         <button onclick="reset(16)">Reset</button>
     </div>
-    <div id="container" class="container"></div>
+    <div class="grid-container">
+        <div class="grid-size" id="grid-size">16 x 16</div>
+        <div id="container" class="container"></div>
+    </div>
 </body>
 </html>

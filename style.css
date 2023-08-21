@@ -1,3 +1,7 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 body {
     display: flex;
     align-items: center;
@@ -14,6 +18,10 @@ button, input {
     text-align: center;
 }
 
+#color-button {
+    font-weight: 900;
+}
+
 button:active {
     background-color: rgb(122, 116, 116);
 }
@@ -28,6 +36,23 @@ input {
     width: 800px;
 }
 
+.grid-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.color-container, .size-container {
+    display: flex;
+    align-items: center;
+}
+.grid-size {
+    font-size: 48px;
+    color: white;
+}
+
 .options {
     display: flex;
     flex-direction: column;
@@ -35,11 +60,9 @@ input {
 }
 .child {
     display: flex;
-    border: 1px solid rgb(118, 118, 122);
     flex: 1;
 }
 
 .child1 {
-    border: 1px solid rgb(118, 118, 122);
     flex: 1;
 }
